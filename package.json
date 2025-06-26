@@ -1,0 +1,20 @@
+{
+  "name": "mindbloom-ai-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:server": "npm start --workspace=server",
+    "dev:server": "npm run start:dev --workspace=server",
+    "start:ios": "npm run ios --workspace=app",
+    "start:android": "npm run android --workspace=app",
+    "install": "npm install --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "format": "prettier --write \"packages/**/*.ts\""
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}
